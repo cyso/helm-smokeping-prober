@@ -76,7 +76,7 @@ tolerations: []
 affinity: {}
 
 prometheus:
-  enabled: false
+  enabled: true
   spec:
     replicas: 1
     resources:
@@ -85,7 +85,7 @@ prometheus:
 
   serviceMonitor:
     # -- If enabled, ServiceMonitor resources for Prometheus Operator are created
-    enabled: false
+    enabled: true
     # -- Alternative namespace for ServiceMonitor resources
     namespace: null
     # -- Namespace selector for ServiceMonitor resources
