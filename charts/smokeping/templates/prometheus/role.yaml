@@ -9,3 +9,4 @@ rules:
   resources:
   - "*"
   verbs: ["get", "list", "watch"]
+{{end}}
