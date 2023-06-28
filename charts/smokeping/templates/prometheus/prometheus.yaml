@@ -7,7 +7,7 @@ spec:
   {{ tpl (toYaml .Values.prometheus.spec) . | nindent 2 }}
   serviceMonitorSelector:
     matchLabels:
-      release: {{ include "smokeping.fullname" . }}
-      componemt: smokeping-prober
+      app.kubernetes.io/instance: {{ include "smokeping.fullname" . }}
+      app.kubernetes.io/component: smokeping-prober
   serviceAccountName: {{ include "smokeping.fullname" . }}-prometheus
 {{end}}
